@@ -1,0 +1,11 @@
+.titulo{
+	margin-bottom: 1rem;
+}
+
+.panelGrafico{
+	width: 100%;
+}
+
+.panelGrafico__donut{
+	width: 55%;
+}

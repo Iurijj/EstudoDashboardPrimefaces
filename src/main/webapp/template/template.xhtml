@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+	<h:head>
+	
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<link rel="shortcut icon" type="image/ico" href="#{request.contextPath}/resources/imagens/favicon.ico" />
+		
+		<title>Estudo DashBoard</title>
+		
+		<ui:include src="/template/import-css.xhtml" />
+		
+	</h:head>
+
+	<h:body>
+		
+		<f:facet name="last">
+			<h:outputStylesheet library="css" name="/sobreescrita-primefaces/menu.css" />
+		</f:facet>
+		
+		<main class="principal">
+		
+			<section class="container container__menu-lateral">
+				
+				<h:form id="formularioMenuLateral" styleClass="container__menu-lateral-formulario">
+					<ui:include src="/menu/menu-lateral.xhtml" />
+				</h:form>
+				
+			</section>
+		
+			<section class="container container__conteudo">
+				<ui:insert name="corpo" />
+			</section>
+		
+		</main>
+	
+	</h:body>
+
+</html>

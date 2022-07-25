@@ -1,0 +1,37 @@
+<ui:composition 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui" >
+
+	<p:menu styleClass="menu-lateral">
+	    
+	    <p:submenu label="Gráficos">
+	    
+	        <p:menuitem id="itemGraficoBarra" 
+	        	value="Barras"
+	        	title="Barras" 
+				icon="pi pi-chart-bar"
+				url="#{request.contextPath}/home/graficos/barras/barra-form.xhtml" 
+				styleClass="menu-lateral__item" />
+	    
+	    	<p:menuitem id="itemGraficoDonut" 
+	    		value="Donut"
+	    		title="Donut" 
+	    		icon="pi pi-circle"
+	    		url="#{request.contextPath}/home/graficos/donut/donut-form.xhtml" 
+	    		styleClass="menu-lateral__item" />
+	    		
+    		<p:menuitem id="itemGraficoPie" 
+	    		value="Pie"
+	    		title="Pie" 
+	    		icon="pi pi-chart-pie"
+	    		url="#{request.contextPath}/home/graficos/pie/pie-form.xhtml" 
+	    		styleClass="menu-lateral__item" />
+	    
+	    </p:submenu>
+	    
+	</p:menu>
+	
+</ui:composition>

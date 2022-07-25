@@ -1,0 +1,30 @@
+<ui:composition template="/template/template-corpo.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui" >
+
+	<ui:define name="titulo">#{barMB.nomeGrafico}</ui:define>
+
+	<ui:define name="conteudo">
+	
+		<f:metadata>
+			<f:event listener="#{barMB.init}" type="preRenderView"/>
+		</f:metadata>
+		
+		 <p:tabView>
+		 
+		 	<p:tab title="Vertical">
+		 		<ui:include src="/home/graficos/barras/barra-form-tab-vertical.xhtml" />
+		 	</p:tab>
+		 	
+		 	<p:tab title="Horizontal">
+		 		<ui:include src="/home/graficos/barras/barra-form-tab-horizontal.xhtml" />
+		 	</p:tab>
+		 	
+		 </p:tabView>
+	
+	</ui:define>
+	
+</ui:composition>

@@ -1,0 +1,17 @@
+:root{
+    
+    --cor-de-fundo: #FFF;
+    --cor-principal: #2196F3;
+    
+    --altura-main: 100vh;
+    
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+}
+
+h1{
+	font-size: 2rem;
+    font-weight: bold;
+}

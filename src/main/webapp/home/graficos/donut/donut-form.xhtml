@@ -1,0 +1,26 @@
+<ui:composition template="/template/template-corpo.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui" >
+
+	<ui:define name="titulo">#{donutMB.nomeGrafico}</ui:define>
+
+	<ui:define name="conteudo">
+	
+		<f:metadata>
+			<f:event listener="#{donutMB.init}" type="preRenderView"/>
+		</f:metadata>
+		
+		<p:panel id="panelGraficoDonut" styleClass="panelGrafico__donut">
+	
+			<p:donutChart id="graficoDonut" 
+				model="#{donutMB.modeloDonut}" 
+				style="width: 100%; height: 500px;"/>
+				
+		</p:panel>
+	
+	</ui:define>
+	
+</ui:composition>

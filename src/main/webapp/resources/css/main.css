@@ -1,0 +1,32 @@
+.principal{
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 4fr;
+    height: var(--altura-main);
+    padding: 0.5rem;
+}
+
+.container{
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 10%);
+}
+
+.container__menu-lateral{
+	background-color: unset;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.container__menu-lateral-formulario{
+	width: 100%;
+    display: inherit;
+    justify-content: inherit;
+}
+
+
+.container__conteudo{
+	padding: 0.5rem;
+}

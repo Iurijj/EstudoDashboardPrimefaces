@@ -1,0 +1,27 @@
+.menu-lateral{
+	border: none!important;
+	border-radius: 0px!important;	
+	padding: 0px!important;
+	width: inherit!important;
+}
+
+.menu-lateral > ul > li{
+	border-bottom: 1px solid var(--cor-principal)!important;
+}
+
+.menu-lateral__item{
+    display: flex!important;
+    align-items: center;
+}
+
+.menu-lateral__item > .ui-menuitem-text{
+	max-width: 15rem;
+	width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;	
+}
+
+.menu-lateral__item > .ui-menuitem-icon.ui-icon::before{
+	color: var(--cor-principal);
+}
+
