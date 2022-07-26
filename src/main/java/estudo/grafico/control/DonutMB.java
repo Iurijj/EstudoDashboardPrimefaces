@@ -18,7 +18,7 @@ public class DonutMB extends AbstractGraficoMB {
 
 	private static final long serialVersionUID = 1L;
 
-	private static final String NOME_GRAFICO = "Pie";
+	private static final String NOME_GRAFICO = "Donut";
 	
 	@Inject private FactoryConjuntoDadosGraficoService factoryConjuntoDadosGraficoService;
 	
