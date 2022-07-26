@@ -34,7 +34,7 @@ public class ConjuntoDadosGraficoPieImpl implements ConjuntoDadosGraficoService<
 	}
 	
 	@Override
-	public ResultadoConjuntoDadosCriadoTO<PieChartDataSet> obterConjuntoPopulado(List<ItemGraficoDashboard> itens) {
+	public ResultadoConjuntoDadosCriadoTO<PieChartDataSet> obterConjuntoPopulado(List<ItemGraficoDashboard> itens, String label) {
 
 		PieChartDataSet conjunto = this.criarConjunto();
 		

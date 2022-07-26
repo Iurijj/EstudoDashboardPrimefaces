@@ -60,10 +60,10 @@ public abstract class AbstractModeloGraficoDashboard<M extends ChartModel> {
 	public abstract TipoConjuntoGrafico getTipoConjunto();
 	
 	
-	public void criarAndPopularConjuntoDadosGrafico(List<ItemGraficoDashboard> itens) {
+	public void criarAndPopularConjuntoDadosGrafico(List<ItemGraficoDashboard> itens, String label) {
 		
 		ConjuntoDadosGraficoService<?> conjuntoDadosService = this.obterConjuntoDadosService(this.getTipoConjunto());
-		ResultadoConjuntoDadosCriadoTO<?> resultado = conjuntoDadosService.obterConjuntoPopulado(itens);
+		ResultadoConjuntoDadosCriadoTO<?> resultado = conjuntoDadosService.obterConjuntoPopulado(itens, label);
 		
 		this.adicionarConjuntoAoModelo(resultado);
 		

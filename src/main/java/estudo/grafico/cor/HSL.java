@@ -5,7 +5,7 @@ import estudo.grafico.cor.enumerador.TipoCor;
 public class HSL extends AbstractCor<HSL> {
 
 	
-	private static final String TEMPLATE_HSL = "HSL(%s, %s%%, %s%%)";
+	private static final String TEMPLATE_HSL = "%sdeg, %s%%, %s%%";
 	
 	
 	private int hue;
@@ -42,7 +42,7 @@ public class HSL extends AbstractCor<HSL> {
 	
 	@Override
 	protected String getValorCor() {
-		return String.format(TEMPLATE_HSL, this.hue, this.lightness, this.lightness);
+		return String.format(TEMPLATE_HSL, this.hue, this.saturation, this.lightness);
 	}
 	
 	

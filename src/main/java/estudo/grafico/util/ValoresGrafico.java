@@ -7,20 +7,52 @@ import estudo.grafico.cor.Cor;
 import estudo.grafico.domain.enumerador.CategoriaGraficoDashboard;
 import estudo.grafico.domain.enumerador.ItemGraficoDashboard;
 import estudo.grafico.infra.enumerador.CategoriaAno;
+import estudo.grafico.infra.enumerador.ClienteGrafico;
 
 public class ValoresGrafico {
 
 	public static List<ItemGraficoDashboard> obterValoresGrafico() {
 		
 		List<ItemGraficoDashboard> valores = new ArrayList<ItemGraficoDashboard>();
-		valores.add(criarValorGrafico(1, CorUtil.getSkyBlue(), CategoriaAno.DOIS_MIL_E_TREZE));
-		valores.add(criarValorGrafico(6, CorUtil.getCrimson(), CategoriaAno.DOIS_MIL_E_DOZE));
-		valores.add(criarValorGrafico(7, CorUtil.getYellow(), CategoriaAno.DOIS_MIL_E_DEZ));
-		valores.add(criarValorGrafico(8, CorUtil.getSkyBlue(), CategoriaAno.DOIS_MIL_E_ONZE));
+		
+		int valorGrafico = 50000;
+		int percSaturacao = 35;
+		int percLightness = 31;
+		for (ClienteGrafico clienteGrafico : ClienteGrafico.values()) {
+		
+			valores.add(criarValorGrafico(valorGrafico, CorUtil.getCor(236, percSaturacao, percLightness), clienteGrafico));
+
+			valorGrafico -= 5000;
+			percSaturacao += 5;
+			percLightness += 5;
+			
+		}
 		
 		return valores;
 		
 	}
+	
+	public static List<ItemGraficoDashboard> obterValoresGraficoDonut() {
+		
+		List<ItemGraficoDashboard> valores = new ArrayList<ItemGraficoDashboard>();
+		
+		int valorGrafico = 50000;
+		int percSaturacao = 35;
+		int percLightness = 31;
+		for (CategoriaAno ano : CategoriaAno.values()) {
+		
+			valores.add(criarValorGrafico(valorGrafico, CorUtil.getCor(500, percSaturacao, percLightness), ano));
+
+			valorGrafico -= 10000;
+			percSaturacao += 5;
+			percLightness += 5;
+			
+		}
+		
+		return valores;
+		
+	}
+	
 	
 	private static ItemGraficoDashboard criarValorGrafico(final Number valor,
 												  final Cor<?, ?> cor,

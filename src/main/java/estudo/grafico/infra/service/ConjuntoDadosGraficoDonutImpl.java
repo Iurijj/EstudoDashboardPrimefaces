@@ -34,7 +34,7 @@ public class ConjuntoDadosGraficoDonutImpl implements ConjuntoDadosGraficoServic
 	}
 	
 	@Override
-	public ResultadoConjuntoDadosCriadoTO<DonutChartDataSet> obterConjuntoPopulado(List<ItemGraficoDashboard> itens) {
+	public ResultadoConjuntoDadosCriadoTO<DonutChartDataSet> obterConjuntoPopulado(List<ItemGraficoDashboard> itens, String label) {
 
 		DonutChartDataSet conjunto = this.criarConjunto();
 		

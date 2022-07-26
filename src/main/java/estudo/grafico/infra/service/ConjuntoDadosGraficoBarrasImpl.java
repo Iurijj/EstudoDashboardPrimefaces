@@ -18,6 +18,7 @@ import estudo.grafico.domain.enumerador.ItemGraficoDashboard;
 import estudo.grafico.domain.service.ConjuntoDadosGraficoService;
 import estudo.grafico.infra.enumerador.TipoConjuntoGrafico;
 import estudo.grafico.to.ResultadoConjuntoDadosCriadoTO;
+import estudo.grafico.util.StringUtil;
 
 @Stateless
 @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
@@ -36,10 +37,12 @@ public class ConjuntoDadosGraficoBarrasImpl implements ConjuntoDadosGraficoServi
 	}
 	
 	@Override
-	public ResultadoConjuntoDadosCriadoTO<BarChartDataSet> obterConjuntoPopulado(List<ItemGraficoDashboard> itens) {
+	public ResultadoConjuntoDadosCriadoTO<BarChartDataSet> obterConjuntoPopulado(List<ItemGraficoDashboard> itens, String label) {
+		
+		String labelChart = (StringUtil.isVazio(label))? NOME_DEFAULT : label;
 		
 		BarChartDataSet conjunto = this.criarConjunto();
-		conjunto.setLabel(NOME_DEFAULT);
+		conjunto.setLabel(labelChart);
 		
 		Set<CategoriaGraficoDashboard> categorias = new HashSet<CategoriaGraficoDashboard>();
 		

@@ -36,7 +36,7 @@ public class ConjuntoDadosGraficoBarrasHorizontalImpl implements ConjuntoDadosGr
 	}
 	
 	@Override
-	public ResultadoConjuntoDadosCriadoTO<HorizontalBarChartDataSet> obterConjuntoPopulado(List<ItemGraficoDashboard> itens) {
+	public ResultadoConjuntoDadosCriadoTO<HorizontalBarChartDataSet> obterConjuntoPopulado(List<ItemGraficoDashboard> itens, String label) {
 		
 		HorizontalBarChartDataSet conjunto = this.criarConjunto();
 		conjunto.setLabel(NOME_DEFAULT);

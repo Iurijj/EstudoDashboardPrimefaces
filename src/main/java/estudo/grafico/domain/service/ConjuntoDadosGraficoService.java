@@ -14,6 +14,6 @@ public interface ConjuntoDadosGraficoService<C extends ChartDataSet> {
 	
 	C criarConjunto();
 	
-	ResultadoConjuntoDadosCriadoTO<C> obterConjuntoPopulado(List<ItemGraficoDashboard> itens);
+	ResultadoConjuntoDadosCriadoTO<C> obterConjuntoPopulado(List<ItemGraficoDashboard> itens, String label);
 	
 }

@@ -18,7 +18,7 @@ public class DonutMB extends AbstractGraficoMB {
 
 	private static final long serialVersionUID = 1L;
 
-	private static final String NOME_GRAFICO = "Donut";
+	private static final String NOME_GRAFICO = "Pie";
 	
 	@Inject private FactoryConjuntoDadosGraficoService factoryConjuntoDadosGraficoService;
 	
@@ -35,7 +35,7 @@ public class DonutMB extends AbstractGraficoMB {
 	
 	private void criarGrafico() {
 		
-		List<ItemGraficoDashboard> valoresGrafico = ValoresGrafico.obterValoresGrafico();
+		List<ItemGraficoDashboard> valoresGrafico = ValoresGrafico.obterValoresGraficoDonut();
 		
 		this.criarGraficoBarraVertical(valoresGrafico);
 		
@@ -47,7 +47,7 @@ public class DonutMB extends AbstractGraficoMB {
 		ModeloGraficoDashboardDonut modeloGraficoDashboardDonut = 
 				new ModeloGraficoDashboardDonut(this.factoryConjuntoDadosGraficoService);
 		
-		modeloGraficoDashboardDonut.criarAndPopularConjuntoDadosGrafico(valoresGrafico);
+		modeloGraficoDashboardDonut.criarAndPopularConjuntoDadosGrafico(valoresGrafico, "");
 		
 		this.modeloDonut = modeloGraficoDashboardDonut.gerarGraficoDashboard();
 		

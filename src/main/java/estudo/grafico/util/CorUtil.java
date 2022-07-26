@@ -1,6 +1,7 @@
 package estudo.grafico.util;
 
 import estudo.grafico.cor.Cor;
+import estudo.grafico.cor.HSL;
 import estudo.grafico.cor.RGB;
 import estudo.grafico.cor.RGBA;
 
@@ -22,6 +23,15 @@ public class CorUtil {
 	
 	public static Cor<RGBA, RGB> getGreen(){
 		return getCor(30, 220, 30, DEFAULT_ALPHA);
+	}
+	
+	public static Cor<HSL, HSL> getCor(int hue, int saturation, int lightness){
+		
+		HSL corFundo = new HSL(hue, saturation, lightness);
+		HSL corBorda = new HSL(hue, saturation, lightness);
+		
+		return new Cor<HSL, HSL>(corFundo, corBorda);
+		
 	}
 	
 	public static Cor<RGBA, RGB> getCor(int red, int green, int blue, float alpha){

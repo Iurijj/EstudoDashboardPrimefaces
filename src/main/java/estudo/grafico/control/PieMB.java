@@ -47,7 +47,7 @@ public class PieMB extends AbstractGraficoMB {
 		ModeloGraficoDashboardPie modeloGraficoDashboardPie = 
 				new ModeloGraficoDashboardPie(this.factoryConjuntoDadosGraficoService);
 		
-		modeloGraficoDashboardPie.criarAndPopularConjuntoDadosGrafico(valoresGrafico);
+		modeloGraficoDashboardPie.criarAndPopularConjuntoDadosGrafico(valoresGrafico, "");
 		
 		this.modeloPie = modeloGraficoDashboardPie.gerarGraficoDashboard();
 		

@@ -60,9 +60,9 @@ public class BarMB extends AbstractGraficoMB {
 	private void criarGraficoBarraVertical(List<ItemGraficoDashboard> valoresGrafico) {
 		
 		ModeloGraficoDashboardBarra modeloGraficoDashboardBarra = 
-				new ModeloGraficoDashboardBarra("Teste 1", this.factoryConjuntoDadosGraficoService);
+				new ModeloGraficoDashboardBarra("Vendas por Cliente", this.factoryConjuntoDadosGraficoService);
 		
-		modeloGraficoDashboardBarra.criarAndPopularConjuntoDadosGrafico(valoresGrafico);
+		modeloGraficoDashboardBarra.criarAndPopularConjuntoDadosGrafico(valoresGrafico, "Cliente");
 		
 		this.modeloVerticalBarra = modeloGraficoDashboardBarra.gerarGraficoDashboard();
 		
@@ -71,9 +71,9 @@ public class BarMB extends AbstractGraficoMB {
 	private void criarGraficoHorizontal(List<ItemGraficoDashboard> valoresGrafico) {
 		
 		ModeloGraficoDashboardBarraHorizontal modeloGrafDashboardBarraHorizontal = 
-				new ModeloGraficoDashboardBarraHorizontal("Teste 1", this.factoryConjuntoDadosGraficoService);
+				new ModeloGraficoDashboardBarraHorizontal("Vendas por Cliente", this.factoryConjuntoDadosGraficoService);
 		
-		modeloGrafDashboardBarraHorizontal.criarAndPopularConjuntoDadosGrafico(valoresGrafico);
+		modeloGrafDashboardBarraHorizontal.criarAndPopularConjuntoDadosGrafico(valoresGrafico, "Cliente");
 		
 		this.modeloHorizontalBarra = modeloGrafDashboardBarraHorizontal.gerarGraficoDashboard();
 		
